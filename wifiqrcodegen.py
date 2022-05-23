@@ -21,3 +21,5 @@ except:
 #Generate QR code
 picture = wifi_qrcode_generator.wifi_qrcode(ssid, False, 'WPA', pwd)
 picture = picture.save(f"{ssid}.png")
+
+print("The QR code was succesfully generated and has been stored in the current directory.")
