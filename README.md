@@ -5,7 +5,7 @@ Generates a QR code for the wifi network.
 - An up-to-date Linux machine.
 - The latest version of python.
 - The wifi_qrcode_generator python module.
-- A wifi network that the machine has connected to before and the SSID of that wifi network.
+- A wifi network that the machine has connected to before.
 
 # Setup
 -Installs wifi-qrcode-generator:
