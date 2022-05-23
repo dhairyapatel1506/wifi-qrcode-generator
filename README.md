@@ -8,4 +8,5 @@ Generates a QR code for the wifi network.
 - A wifi network that the machine has connected to before and the SSID of that wifi network.
 
 # Setup
-- pip3 install wifi-qrcode-generator
+-Installs wifi-qrcode-generator:
+  $ pip3 install wifi-qrcode-generator
