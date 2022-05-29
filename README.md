@@ -9,4 +9,4 @@ Generates a QR code for the wifi network.
 
 # Setup
 - Installs wifi-qrcode-generator:
-    $ pip3 install wifi-qrcode-generator
+    pip3 install wifi-qrcode-generator
