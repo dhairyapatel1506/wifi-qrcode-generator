@@ -2,11 +2,16 @@
 import subprocess
 import wifi_qrcode_generator
 
-ssid = input("SSID: ")
+print("Saved Wifi Networks:\n")
+savedNetworks = subprocess.check_output(['ls', '/etc/NetworkManager/system-connections/']).decode('utf-8').split("\n")
+for savedNetwork in savedNetworks:
+    print(f"\t{savedNetwork.split('.')[0]}")
+
+ssid = input("Enter SSID: ")
  
 try:
    
-    #Retrieve saved wifi data
+    # Retrieve saved wifi data
     Id = subprocess.check_output(
         ['sudo', 'cat', f"/etc/NetworkManager/system-connections/{ssid}.nmconnection"]).decode('utf-8').split('\n')
      
@@ -16,9 +21,10 @@ try:
     print("Password :", pwd)
      
 except:
+
     print("Something's wrong")
      
-#Generate QR code
+# Generate QR code
 picture = wifi_qrcode_generator.wifi_qrcode(ssid, False, 'WPA', pwd)
 picture = picture.save(f"{ssid}.png")
 

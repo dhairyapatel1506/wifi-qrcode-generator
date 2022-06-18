@@ -1,5 +1,5 @@
 # Description
-Generates a QR code for the wifi network.
+Generates QR codes for saved wifi networks.
 
 # Requirements
 - An up-to-date Linux machine.
